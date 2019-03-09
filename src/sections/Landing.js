@@ -79,7 +79,7 @@ const LandingPage = () => (
               mb={[3, 5]}
               textAlign="center"
             >
-              <TextLoop>
+              <TextLoop interval={2000}>
                 {roles.map(text => (
                   <Text width={[300, 500]} key={text}>
                     {text}
