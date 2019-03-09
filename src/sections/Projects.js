@@ -113,7 +113,7 @@ const Project = ({
   publishedDate,
   logo,
 }) => (
-  <Card p={0}>
+  <Card p={0} width={['100%', '100%', CARD_WIDTH]}>
     <Flex style={{ height: CARD_HEIGHT }}>
       <TextContainer>
         <span>
