@@ -114,7 +114,7 @@ const Project = ({
   logo,
 }) => (
   <Card p={0}>
-    <Flex style={{ height: CARD_HEIGHT, width: CARD_WIDTH }}>
+    <Flex style={{ height: CARD_HEIGHT }}>
       <TextContainer>
         <span>
           <Title my={2} pb={1}>
@@ -127,7 +127,9 @@ const Project = ({
       </TextContainer>
 
       <ImageContainer>
-        <ProjectImage src={logo.image.src} alt={logo.title} />
+        <a href={projectUrl}>
+          <ProjectImage src={logo.image.src} alt={logo.title} />
+        </a>
         <ProjectTag>
           <Flex
             style={{
