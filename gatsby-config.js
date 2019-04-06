@@ -2,7 +2,7 @@
 const manifestConfig = require('./manifest-config');
 require('dotenv').config();
 
-const { ACCESS_TOKEN, SPACE_ID, /* ANALYTICS_ID */ } = process.env;
+const { ACCESS_TOKEN, SPACE_ID /* ANALYTICS_ID */ } = process.env;
 
 // const client = contentful.createClient({
 //   space: SPACE_ID,
@@ -33,30 +33,31 @@ const plugins = [
   },
   'gatsby-transformer-remark',
   'gatsby-plugin-offline',
+  'gatsby-plugin-netlify',
 ];
 
 module.exports = {
-  plugins
-}
+  plugins,
+};
 
 // module.exports = client.getEntries().then(entries => {
-  // const { mediumUser = '@medium' } = entries.items.find(getAboutEntry).fields;
+// const { mediumUser = '@medium' } = entries.items.find(getAboutEntry).fields;
 
-  // plugins.push({
-  //   resolve: 'gatsby-source-medium',
-  //   options: {
-  //     username: mediumUser,
-  //   },
-  // });
+// plugins.push({
+//   resolve: 'gatsby-source-medium',
+//   options: {
+//     username: mediumUser,
+//   },
+// });
 
-  // if (ANALYTICS_ID) {
-  //   plugins.push({
-  //     resolve: 'gatsby-plugin-google-analytics',
-  //     options: {
-  //       trackingId: ANALYTICS_ID,
-  //     },
-  //   });
-  // }
+// if (ANALYTICS_ID) {
+//   plugins.push({
+//     resolve: 'gatsby-plugin-google-analytics',
+//     options: {
+//       trackingId: ANALYTICS_ID,
+//     },
+//   });
+// }
 
 //   return {
 //     plugins,

@@ -52,7 +52,7 @@ const Header = () => (
               <Image
                 src={Logo}
                 width="50px"
-                alt="Portfolio Logo"
+                alt="ASBAB"
                 onClick={home.onClick}
                 style={{
                   cursor: 'pointer',
