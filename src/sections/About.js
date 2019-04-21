@@ -2,8 +2,10 @@ import React from 'react';
 import { Box, Image, Flex } from 'rebass';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+
 import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
+import logo from '../components/Logo/logo.svg';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
@@ -33,6 +35,7 @@ const Background = () => (
 );
 
 const ProfilePicture = styled(Image)`
+  background-color: #ff4081;
   border-radius: 50%;
   transition: all 0.25s ease-out;
 
@@ -53,17 +56,11 @@ const About = () => (
                 rawMarkdownBody
               }
             }
-            profile {
-              title
-              image: resize(width: 450, quality: 100) {
-                src
-              }
-            }
           }
         }
       `}
       render={data => {
-        const { aboutMe, profile } = data.contentfulAbout;
+        const { aboutMe } = data.contentfulAbout;
         return (
           <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
             <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
@@ -81,8 +78,9 @@ const About = () => (
             >
               <Fade right>
                 <ProfilePicture
-                  src={profile.image.src}
-                  alt={profile.title}
+                  width={450}
+                  src={logo}
+                  alt="ASBAB"
                   mt={[4, 4, 0]}
                   ml={[0, 0, 1]}
                 />

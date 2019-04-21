@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cleandir ./.cache && gatsby build",
+    "clean": "rm -rf .cache public node_modules/.cache",
     "develop": "cleandir ./.cache && gatsby develop",
     "start": "npm run develop",
     "lint": "eslint ./src"
