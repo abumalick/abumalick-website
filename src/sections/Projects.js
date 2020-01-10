@@ -132,6 +132,7 @@ const Project = ({
         </a>
         <ProjectTag>
           <Flex
+            mt={1}
             style={{
               float: 'right',
             }}
@@ -201,7 +202,6 @@ const Projects = () => (
                 name
                 description
                 projectUrl
-                repositoryUrl
                 publishedDate(formatString: "YYYY")
                 type
                 logo {
