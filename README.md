@@ -1,8 +1,6 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-# ASBAB website
-
-> Our company website
+# Abumalick website
 
 Bootstraped with https://github.com/EmaSuriano/gatsby-starter-mate
 
